@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 from utils.image_utils import area
+from morph.blend import laplacian_pyrimid_blending
 
 #######################################################################################################################################################
 # ### isInsideTriangle(p1,p2,p3,x,y)
@@ -120,12 +121,14 @@ def checkRange(sx , sy , dx , dy, img1, img2):
     return sx,sy,dx,dy
 
 ###############################################################################################################
-# morph(no_of_intermed)
+# warp_image_affine_transform_with_linear_dissolve
 # To do affine Transformation from source image to destination image by making some intermediate images in which 
 # pixel value are calculated by combination of pixel value in source and destination image 
 # with linear dissolve blending
 # Arguments:
-# This function take only 1 argument which is the how many number of intermediate images we want to make.
+# no_of_intermed -- how many number of intermediate images we want to make.
+# img1 -- Source image
+# img2 -- Target image
 ################################################################################################################ 
 
 def warp_image_affine_transform_with_linear_dissolve(no_of_intermed, img1, img2, tri1, tri2):
@@ -180,3 +183,69 @@ def warp_image_affine_transform_with_linear_dissolve(no_of_intermed, img1, img2,
         cv2.imwrite(name, inter) 
        # cv2.waitKey(0)
        # cv2.destroyAllWindows()
+       
+       
+###############################################################################################################
+# warp_image_affine_transform_with_laplacian_pyrimid_blending
+# To do affine Transformation from source image to destination image with laplacian pyrimid blending
+# Arguments:
+# no_of_intermed -- how many number of intermediate images we want to make.
+# img1 -- Source image
+# img2 -- Target image
+################################################################################################################ 
+
+def warp_image_affine_transform_with_laplacian_pyrimid_blending(no_of_intermed, img1, img2, tri1, tri2):
+    n=no_of_intermed+2
+    
+    for k in range(1,no_of_intermed+1):
+        
+        print(str(k)+" intermediate is generating it may take some time Please Wait...")
+        img1_warp = np.zeros_like(img1, dtype=np.float32)
+        img2_warp = np.zeros_like(img2, dtype=np.float32)
+        inter=np.zeros_like(img1,dtype=np.uint8)
+        row,col,channel=inter.shape
+        print(f"row == {row}, col == {col}, channel == {channel}")
+
+        intTri=get_intermediate_triangles(tri1,tri2,k,n)
+        
+        print(f"@@@ intTri == {intTri}")
+
+        for (s_tri , i_tri , d_tri) in zip(tri1 , intTri , tri2):
+
+            src_e1x , src_e1y , src_e2x , src_e2y = get_affine_basis(s_tri)
+            int_e1x , int_e1y , int_e2x , int_e2y = get_affine_basis(i_tri)
+            dest_e1x , dest_e1y , dest_e2x , dest_e2y = get_affine_basis(d_tri)
+            
+            #print(f"debug 1")
+            for r in range(row):
+                for c in range(col):
+                    if isInsideTriangle(i_tri[0],i_tri[1],i_tri[2],r,c):
+                        # print("debug 3")
+                        X = r-i_tri[0][0]
+                        Y = c-i_tri[0][1]
+
+                        alpha=((int_e2y*X)-(Y*int_e2x))/((int_e1x*int_e2y)-(int_e2x*int_e1y))
+                        beta=((int_e1y*X)-(Y*int_e1x))/((int_e1y*int_e2x)-(int_e2y*int_e1x))
+
+                        dest_x=int(alpha*dest_e1x+beta*dest_e2x+d_tri[0][0])
+                        dest_y=int(alpha*dest_e1y+beta*dest_e2y+d_tri[0][1])
+
+                        src_x=int(alpha*src_e1x+beta*src_e2x+s_tri[0][0])
+                        src_y=int(alpha*src_e1y+beta*src_e2y+s_tri[0][1])
+
+                        src_x,src_y,dest_x,dest_y=checkRange(src_x,src_y,dest_x,dest_y, img1, img2)
+
+                        img1_warp[r][c] = img1[src_x][src_y]
+                        img2_warp[r][c] = img2[dest_x][dest_y]
+
+
+#         cv2.imshow("inter"+str(k),inter)
+        alpha = k / n
+        inter = laplacian_pyrimid_blending(img1_warp, img2_warp, alpha)
+        inter = np.clip(inter, 0, 255).astype(np.uint8)
+
+        print(f"debug 2")
+        name="generated-images/laplacian-pyrimid-blending/inter_"+str(k)+".jpg"
+        cv2.imwrite(name, inter) 
+       # cv2.waitKey(0)
+       # cv2.destroyAllWindows()       

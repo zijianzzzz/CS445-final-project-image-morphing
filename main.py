@@ -4,6 +4,7 @@ import sys
 import cv2
 
 from morph.warp import warp_image_affine_transform_with_linear_dissolve
+from morph.warp import warp_image_affine_transform_with_laplacian_pyrimid_blending
 from morph.triangulation import compute_delaunay
 
 #######################################################################################################################################
@@ -138,6 +139,7 @@ if __name__ == "__main__":
     print(f"@@ tri1 == {tri1}")
     print(f"@@ tri2 == {tri2}")
     warp_image_affine_transform_with_linear_dissolve(int(input("Enter number of intermediate you want ")), img1, img2, tri1, tri2)
+    # warp_image_affine_transform_with_laplacian_pyrimid_blending(int(input("Enter number of intermediate you want ")), img1, img2, tri1, tri2)
 
 
 
