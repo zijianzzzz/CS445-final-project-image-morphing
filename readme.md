@@ -39,8 +39,8 @@ The code will take some time to create and save the desired number of intermedia
                     $ffmpeg -version
 
                     ## generate mp4 or gif
-                    $ffmpeg -framerate 15 -i generated-images/inter_%d.jpg generated-images/output.gif
-                    $ffmpeg -framerate 15 -i generated-images/inter_%d.jpg generated-images/output.mp4
+                    $ffmpeg -framerate 15 -i generated-images/linear-dissolve/inter_%d.jpg generated-images/linear-dissolve/output.gif
+                    $ffmpeg -framerate 15 -i generated-images/linear-dissolve/inter_%d.jpg generated-images/linear-dissolve/output.mp4
 
 
 
