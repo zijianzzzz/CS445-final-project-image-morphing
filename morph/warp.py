@@ -175,7 +175,7 @@ def warp_image_affine_transform(no_of_intermed, img1, img2, tri1, tri2):
 
 #         cv2.imshow("inter"+str(k),inter)
         print(f"debug 2")
-        name="generated-images/inter_"+str(k)+".jpg"
+        name="generated-images/linear-dissolve/inter_"+str(k)+".jpg"
         cv2.imwrite(name, inter) 
        # cv2.waitKey(0)
        # cv2.destroyAllWindows()
