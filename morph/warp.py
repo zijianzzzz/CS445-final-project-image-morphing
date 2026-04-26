@@ -122,12 +122,13 @@ def checkRange(sx , sy , dx , dy, img1, img2):
 ###############################################################################################################
 # morph(no_of_intermed)
 # To do affine Transformation from source image to destination image by making some intermediate images in which 
-# pixel value are calculated by combination of pixel value in source and destination image
+# pixel value are calculated by combination of pixel value in source and destination image 
+# with linear dissolve blending
 # Arguments:
 # This function take only 1 argument which is the how many number of intermediate images we want to make.
 ################################################################################################################ 
 
-def warp_image_affine_transform(no_of_intermed, img1, img2, tri1, tri2):
+def warp_image_affine_transform_with_linear_dissolve(no_of_intermed, img1, img2, tri1, tri2):
     n=no_of_intermed+2
     
     for k in range(1,no_of_intermed+1):

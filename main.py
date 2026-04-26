@@ -3,7 +3,7 @@ import math
 import sys
 import cv2
 
-from morph.warp import warp_image_affine_transform
+from morph.warp import warp_image_affine_transform_with_linear_dissolve
 from morph.triangulation import compute_delaunay
 
 #######################################################################################################################################
@@ -137,7 +137,7 @@ if __name__ == "__main__":
     tri1,tri2 = showTriangulated(im1,im2)
     print(f"@@ tri1 == {tri1}")
     print(f"@@ tri2 == {tri2}")
-    warp_image_affine_transform(int(input("Enter number of intermediate you want ")), img1, img2, tri1, tri2)
+    warp_image_affine_transform_with_linear_dissolve(int(input("Enter number of intermediate you want ")), img1, img2, tri1, tri2)
 
 
 
