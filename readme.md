@@ -33,16 +33,19 @@ The code will take some time to create and save the desired number of intermedia
 
 <strong>Step-4</strong> Open the command line or terminal and enter the following to generate mp4 video or gif with all the intermediate images generated in step-3:
 
+
 ## install ffmpeg
+```text
 $sudo apt update
 $sudo apt install ffmpeg
 $ffmpeg -version
+```
 
 ## generate mp4 or gif
+```text
 $ffmpeg -framerate 15 -i generated-images/linear-dissolve/inter_%d.jpg generated-images/linear-dissolve/output.gif
 $ffmpeg -framerate 15 -i generated-images/linear-dissolve/inter_%d.jpg generated-images/linear-dissolve/output.mp4
-
-
+```
 
 <strong>If you find any difficulty in the steps above you can refer to the video attached of the same.</strong>
 
