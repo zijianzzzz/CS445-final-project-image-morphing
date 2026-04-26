@@ -18,9 +18,9 @@ who don’t know coding.</p>
 This file contains the steps on how to execute the file.
 
 <strong>Step-1</strong> Open the command line or terminal and enter the following -
-
-                    $python3 main.py img1.png img2.png
-
+```text
+$python3 main.py img1.png img2.png
+```
 here img1 refers to the source image and img2 refers to the destination image.
 
 <strong>Step-2</strong> Enter the control points on img1 using mouse click and press escape after entering all points. Do the same for img2 but the order of points should remain same.
