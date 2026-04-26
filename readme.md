@@ -73,11 +73,14 @@ CS445-final-project-image-morphing/
 │        └── Triangulated Image_dest.jpg
 │
 ├── generated-images                # Directory saving all generated intermediate morphing images and generated MP4 and GIF files
-│   ├── inter_1.jpg
-│   ├── inter_2.jpg
-│   ├── ..........
-│   ├── output.gif
-│   └── output.mp4
+│        ├── laplacian-pyrimid-blending
+│        └── linear-dissolve
+│                 ├── inter_1.jpg
+│                 ├── inter_2.jpg
+│                 ├── ..........
+│                 ├── inter_100.jpg
+│                 ├── output.gif
+│                 └── output.mp4
 │
 ├── generated-images-multi-inputs   # Multiple input images case
 │   ├── inter_1.jpg
