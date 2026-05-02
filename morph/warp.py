@@ -137,7 +137,7 @@ def _generate_frames(no_of_frames, img1, img2, tri1, tri2, output_dir, blend, in
             if blend == "linear":
                 inter = (1.0 - alpha) * img1_warp + alpha * img2_warp
             else:
-                inter = laplacian_pyrimid_blending(img1_warp, img2_warp, alpha)
+                inter = laplacian_pyramid_blending(img1_warp, img2_warp, alpha)
             inter = np.clip(inter, 0, 255).astype(np.uint8)
 
         frame_paths.append(_write_frame(output_dir, frame_index, inter))
@@ -157,13 +157,13 @@ def warp_image_affine_transform_with_linear_dissolve(
     return _generate_frames(no_of_intermed, img1, img2, tri1, tri2, output_dir, "linear", include_endpoints)
 
 
-def warp_image_affine_transform_with_laplacian_pyrimid_blending(
+def warp_image_affine_transform_with_laplacian_pyramid_blending(
     no_of_intermed,
     img1,
     img2,
     tri1,
     tri2,
-    output_dir="generated-images/laplacian-pyrimid-blending",
+    output_dir="generated-images/laplacian-pyramid-blending",
     include_endpoints=False,
 ):
     return _generate_frames(no_of_intermed, img1, img2, tri1, tri2, output_dir, "laplacian", include_endpoints)
