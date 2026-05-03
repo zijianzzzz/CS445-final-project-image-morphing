@@ -64,6 +64,8 @@ the program defaults to the sequential image morphing and will ask you how many 
 
 ```
 
+
+
 <strong>Step-4</strong> Open the command line or terminal and enter the following to generate mp4 video or gif with all the intermediate images generated in step-3:
 
 
