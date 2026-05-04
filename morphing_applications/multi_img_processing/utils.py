@@ -31,7 +31,7 @@ def draw_delaunay(img, triangleList,delaunay_color):
 
 def CallBackFuncForimg(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:
-        cv2.circle(param, (x,y), 1, (255, 255, 255), 2)
+        cv2.circle(param, (x,y), 1, (0, 0, 255), 2)
         coord.append((y,x))
 
 def getcoord(window,image):
@@ -56,7 +56,7 @@ def write_trig_files (imgs):
     write_count = 0
     print(trig_list)
     for t in trig_list:
-        fout = open('./morphing-applications/multi_img_processing/trig-files/trig{0}'.format(write_count), "w")
+        fout = open('./morphing_applications/multi_img_processing/trig-files/trig{0}'.format(write_count), "w")
         for i in t:
             fout.write(str(i))
             fout.write('\n')
@@ -197,7 +197,8 @@ def create_avg_img(imgs,tris):
        # cv2.destroyAllWindows()
 
 def warp_image_affine_transform_multiple_imgs(no_of_intermed, imgs,tris):
-    n=no_of_intermed+2
+    # n=no_of_intermed+2
+    n=no_of_intermed
     base_img = imgs[0]
     frame_count = 0
     
@@ -209,8 +210,6 @@ def warp_image_affine_transform_multiple_imgs(no_of_intermed, imgs,tris):
         
         for k in range(1,no_of_intermed+1):
             
-
-
             print(str(k)+f" of image{x} and  image{x +1} intermediate is generating it may take some time Please Wait...")
             inter=np.zeros_like(base_img,dtype=np.uint8)
             row,col,channel=inter.shape
@@ -254,7 +253,8 @@ def warp_image_affine_transform_multiple_imgs(no_of_intermed, imgs,tris):
 
 #         cv2.imshow("inter"+str(k),inter)
             # print(f"debug 2")
-            name="./morphing_applications/multi_img_processing/multi-input-generated-imgs/inter_"+str(frame_count)+".jpg"
+            # name="./morphing_applications/multi_img_processing/multi-input-generated-imgs/inter_"+str(frame_count)+".jpg"
+            name="./generated-images/multi-input-linear-dissolve/inter_"+str(frame_count)+".jpg"
             cv2.imwrite(name, inter) 
             frame_count = frame_count + 1
        # cv2.waitKey(0)

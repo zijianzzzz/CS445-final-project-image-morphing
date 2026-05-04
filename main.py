@@ -409,6 +409,9 @@ def main():
     args = parse_args()
     if args.multi_image != "":
         imgs = get_multi_input_images(args.multi_image)
+        imgs_original = []
+        for i in range(len(imgs)):
+            imgs_original.append(imgs[i].copy())
         
         if args.multi_image_trigs != "saved":
             write_trig_files(imgs)
@@ -419,7 +422,7 @@ def main():
         if args.multi_image_proccess == "avg":
             create_avg_img(imgs,tris) 
         else:
-            warp_image_affine_transform_multiple_imgs(int(input("how many frames between images would you like?")),imgs,tris)    
+            warp_image_affine_transform_multiple_imgs(int(input("how many frames between images would you like?")),imgs_original,tris)    
     else:
         img1=cv2.imread("./input-images/"+ str(args.image1))
         img2=cv2.imread("./input-images/"+ str(args.image2))
