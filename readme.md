@@ -7,7 +7,8 @@
 <img width="610" height="612" alt="output" src="https://github.com/user-attachments/assets/ffa70be3-dd75-46e5-9d0f-87322feb007c" /> -->
 <!-- <img width="410" height="412" alt="image" src="https://github.com/user-attachments/assets/3207051d-6e26-4a34-b652-da9665d8486f" />
 <img width="410" height="412" alt="output" src="https://github.com/user-attachments/assets/ffa70be3-dd75-46e5-9d0f-87322feb007c" /> -->
-<img width="300" height="300" alt="output" src="https://github.com/user-attachments/assets/e0c62f97-3173-4ed5-88bd-2731ee747aeb" />
+<!-- <img width="300" height="300" alt="output" src="https://github.com/user-attachments/assets/e0c62f97-3173-4ed5-88bd-2731ee747aeb" /> -->
+<img width="300" height="300" alt="output-5M" src="https://github.com/user-attachments/assets/487bf053-9f43-4db9-a5da-ebc20de29554" />
 
 ---
 <p>Image morphing can be defined as a technique which constructs the sequence of images
