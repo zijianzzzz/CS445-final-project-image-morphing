@@ -87,9 +87,19 @@ $ python3 hybrid_morphing_main.py einstein.png monroe.png
 ---
 Output hybrid morphing image:
 -
-<img width="1669" height="228" alt="image" src="https://github.com/user-attachments/assets/dcceca1c-8f7f-468a-a437-5c236f493b78" />
+<img width="500" height="625" alt="hybrid_morph_blending_result" src="https://github.com/user-attachments/assets/506ad382-71d0-4f9e-8feb-e2bd2dd7d6c7" />
+
+<!-- <img width="1669" height="228" alt="image" src="https://github.com/user-attachments/assets/dcceca1c-8f7f-468a-a437-5c236f493b78" />
 <img width="1544" height="477" alt="image" src="https://github.com/user-attachments/assets/af123077-6420-48e9-a7a6-df0ee3969feb" />
-<img width="1671" height="383" alt="image" src="https://github.com/user-attachments/assets/7d8b64fa-2c5f-4f8c-a878-9b245115246f" />
+<img width="1671" height="383" alt="image" src="https://github.com/user-attachments/assets/7d8b64fa-2c5f-4f8c-a878-9b245115246f" /> -->
+
+Design diagram:
+
+<img width="609" height="874" alt="image" src="https://github.com/user-attachments/assets/67feb3d6-6a2b-4afc-b3cc-cf80628982fe" />
+
+<img width="609" height="874" alt="image" src="https://github.com/user-attachments/assets/aac94794-8a1b-4bcf-aa14-651f3bcb953a" />
+
+
  
 <br>
 
