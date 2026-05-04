@@ -52,7 +52,7 @@ $ python3 hybrid_morphing_main.py einstein.png monroe.png
 │    │    └── inter_hipass_1_level_1.jpg    
 │    │    ├── ......        
 │    │    ├── inter_hipass_4_level_4.jpg   
-│    │    └── inter_lowpass_5_level_6.jpg
+│    │    └── inter_lowpass_5_level_5.jpg
 │    ├── output        # Result hybrid morphing image
 │    │    └── hybrid_morph_blending_result.jpg   
 │    ├── inter_1.jpg        
