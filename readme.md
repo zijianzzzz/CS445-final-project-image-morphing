@@ -161,28 +161,28 @@ CS445-final-project-image-morphing/
 |
 │
 ├── evaluation-results
-│   ├── manual-vs-auto
-│   └── matplotlib-cache
+│        ├── manual-vs-auto
+│        └── matplotlib-cache
 │
 ├── main.py                         # This is the entrance Python file
 │
 ├── input-images                    # Directory for two input images
-│   ├── img1.png 
-│   └── img2.png
+│       ├── img1.png 
+│       └── img2.png
 │
 ├── morph                           # Morphing related source code
-│   ├── blend.py
-│   ├── correspondences.py
-│   ├── triangulation.py
-│   ├── evaluation.py
-│   ├── tps.py
-│   └── warp.py
+│       ├── blend.py
+│       ├── correspondences.py
+│       ├── triangulation.py
+│       ├── evaluation.py
+│       ├── tps.py
+│       └── warp.py
 │
 ├── multi-input-images              # Directory for multiple input images, which will be used to generate multiple continuous morphing effects
-│   ├── multi-image1.png
-│   ├── multi-image2.png
-│   ├── multi-image3.png
-│   └── .........
+│       ├── multi-image1.png
+│       ├── multi-image2.png
+│       ├── multi-image3.png
+│       └── .........
 │
 ├── requirements.txt                # Document
 │
