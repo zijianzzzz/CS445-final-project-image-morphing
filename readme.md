@@ -44,7 +44,7 @@ who don’t know coding.</p>
 
 ## Image morphing applications:
 1. Hybrid image using image morphing
-2. Multi-image morphing
+2. Multi-image face averaging
 3. Expression transfer
 4. Application 4
 
