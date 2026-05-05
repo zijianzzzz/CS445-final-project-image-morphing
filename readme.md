@@ -97,11 +97,46 @@ $ python3 main.py img1.png img2.png --correspondence auto --transform affine --b
 $ python3 main.py img1.png img2.png --correspondence auto --transform affine --blend laplacian --frames 30 --no-display
 ```
 
+To generate a full 100-frame sequence where `inter_1.jpg` is the source image and `inter_100.jpg` is the destination image:
+
+```text
+$ python3 main.py img1.png img2.png --correspondence auto --transform affine --blend linear --total-frames 100 --no-display
+$ python3 main.py img1.png img2.png --correspondence auto --transform affine --blend laplacian --total-frames 100 --no-display
+```
+
+Automatic correspondence outputs are saved to:
+
+```text
+generated-images/auto-linear-dissolve/
+generated-images/auto-laplacian-pyramid-blending/
+```
+
 To save the automatically detected points and reuse them later:
 
 ```text
-$ python3 main.py img1.png img2.png --correspondence auto --save-correspondences generated-images/auto_correspondences.json --frames 30 --no-display
-$ python3 main.py img1.png img2.png --correspondence auto --auto-correspondences generated-images/auto_correspondences.json --frames 30 --no-display
+$ python3 main.py img1.png img2.png --correspondence auto --transform affine --save-correspondences generated-images/auto_correspondences.json --total-frames 100 --no-display
+$ python3 main.py img1.png img2.png --correspondence auto --transform affine --auto-correspondences generated-images/auto_correspondences.json --total-frames 100 --no-display
+```
+
+To evaluate manual vs. automatic correspondences, first save a manual correspondence file, then run compare mode:
+
+```text
+$ python3 main.py img1.png img2.png --correspondence manual --transform affine --blend laplacian --total-frames 100 --save-correspondences generated-images/manual_correspondences.json
+$ python3 main.py img1.png img2.png --correspondence compare --transform affine --blend linear --total-frames 100 --manual-correspondences generated-images/manual_correspondences.json --no-display
+$ python3 main.py img1.png img2.png --correspondence compare --transform affine --blend laplacian --total-frames 100 --manual-correspondences generated-images/manual_correspondences.json --no-display
+```
+
+The comparison metrics and figures are saved to:
+
+```text
+evaluation-results/manual-vs-auto/linear_metrics.csv
+evaluation-results/manual-vs-auto/laplacian_metrics.csv
+evaluation-results/manual-vs-auto/linear_side_by_side_frame_2.png
+evaluation-results/manual-vs-auto/linear_side_by_side_frame_51.png
+evaluation-results/manual-vs-auto/linear_side_by_side_frame_99.png
+evaluation-results/manual-vs-auto/laplacian_side_by_side_frame_2.png
+evaluation-results/manual-vs-auto/laplacian_side_by_side_frame_51.png
+evaluation-results/manual-vs-auto/laplacian_side_by_side_frame_99.png
 ```
 
 ### TPS Transformation Examples
