@@ -21,14 +21,12 @@
 
 ---
 ## Project overview:
-<p>Image morphing can be defined as a technique which constructs the sequence of images
-depicting the transition between them. The method that is used in this project involves using
-Delaunay Triangulation and Affine transformation.</p>
-<p>Firstly the images are divided into several parts by selecting different points on it. These points
-on the image are called control points. The control points are used in order to apply the Delaunay
-triangulation as well as the Affine transformation on the images on them. </p>
-<p>Morphing is mainly employed in the field of animations and special effects. In the present day
-there exist many software like after effects, nuke etc. These software can also be used by people
+<p>Image morphing is a digital image processing technique that creates a smooth and continuous transformation from one image to another. Unlike simple crossfading (which only blends pixel intensities), morphing combines geometric warping and color interpolation to produce a visually coherent transition where shapes, structures, and textures appear to evolve naturally over time. The basic techniques used in image morphing are: Linear cross-dissolve blending, Delaunay Triangulation, and Affine transformation. In this project, we will explore the advanced techniques which can enrich and enhance image morphing functionalities.</p>
+<p>Firstly, the images are divided into several parts by selecting different points on them. These points
+on the image are called control points. The control points are used to apply the Delaunay
+triangulation as well as the geometric transformation to the images. </p>
+<p>Morphing is primarily used in animation and special effects. In the present day,
+there exist many software programs like After Effects, Nuke, etc. This software can also be used by people
 who don’t know coding.</p>
 
 ---
