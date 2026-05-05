@@ -140,20 +140,27 @@ CS445-final-project-image-morphing/
 │        └── Triangulated Image_dest.jpg
 │
 ├── generated-images                # Directory saving all generated intermediate morphing images and generated MP4 and GIF files
-│        ├── laplacian-pyramid-blending
+│        ├── manual-laplacian-pyramid-blending
 │        │        ├── inter_1.jpg
 │        │        ├── inter_2.jpg
 │        │        ├── ..........
 │        │        ├── inter_100.jpg
 │        │        ├── output.gif
 │        │        └── output.mp4
-│        └── linear-dissolve
-│                 ├── inter_1.jpg
-│                 ├── inter_2.jpg
-│                 ├── ..........
-│                 ├── inter_100.jpg
-│                 ├── output.gif
-│                 └── output.mp4
+│        ├── anual-linear-dissolve
+│        │        ├── inter_1.jpg
+│        │        ├── inter_2.jpg
+│        │        ├── ..........
+│        │        ├── inter_100.jpg
+│        │        ├── output.gif
+│        │        └── output.mp4
+│        ├── auto-laplacian-pyramid-blending
+│        ├── auto-linear-dissolve
+│        ├── multi-input-laplacian-pyramid-blending
+│        ├── multi-input-linear-dissolve
+│        ├── tps-laplacian-pyramid-blending
+│        └── tps-linear-dissolve
+|
 │
 ├── generated-images-multi-inputs   # Multiple input images case
 │   ├── inter_1.jpg
@@ -161,6 +168,10 @@ CS445-final-project-image-morphing/
 │   ├── ..........
 │   ├── output.gif
 │   └── output.mp4
+│
+├── evaluation-results
+│   ├── manual-vs-auto
+│   └── matplotlib-cache
 │
 ├── main.py                         # This is the entrance Python file
 │
