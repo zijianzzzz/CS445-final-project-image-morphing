@@ -46,8 +46,10 @@ Enhanced morphing features include:
 4. Support multi-input images' bulk morphing
 
 ## Image morphing applications:
-[Hybrid image using image morphing]([https://example.com](https://github.com/johnlee2898-2/CS445-final-project-image-morphing/tree/main/morphing_applications/hybrid_image_with_morphing))
-[Expression transfer]([https://github.com/johnlee2898-2/CS445-final-project-image-morphing/tree/main/morphing_applications/application3])
+1. Hybrid image using image morphing
+2. Multi-image morphing
+3. Expression transfer
+4. Application 4
 
 ---
 
