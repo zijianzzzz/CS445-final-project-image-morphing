@@ -43,7 +43,12 @@ Enhanced morphing features include:
 1. Multi-band Gaussian-Laplacian pyramid blending
 2. Advanced TPS (Thin Plate Splines) transformation
 3. Automatic feature point/landmark detection and triangulation
-4. Support multi-input images' bulk morphing 
+4. Support multi-input images' bulk morphing
+
+## Image morphing applications:
+[Hybrid image using image morphing]([https://example.com](https://github.com/johnlee2898-2/CS445-final-project-image-morphing/tree/main/morphing_applications/hybrid_image_with_morphing))
+[Expression transfer]([https://github.com/johnlee2898-2/CS445-final-project-image-morphing/tree/main/morphing_applications/application3]))
+
 ---
 
 ## Instructions to use the code
