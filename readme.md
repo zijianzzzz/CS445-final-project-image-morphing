@@ -47,7 +47,7 @@ Enhanced morphing features include:
 
 ## Image morphing applications:
 [Hybrid image using image morphing]([https://example.com](https://github.com/johnlee2898-2/CS445-final-project-image-morphing/tree/main/morphing_applications/hybrid_image_with_morphing))
-[Expression transfer]([https://github.com/johnlee2898-2/CS445-final-project-image-morphing/tree/main/morphing_applications/application3]))
+[Expression transfer]([https://github.com/johnlee2898-2/CS445-final-project-image-morphing/tree/main/morphing_applications/application3])
 
 ---
 
