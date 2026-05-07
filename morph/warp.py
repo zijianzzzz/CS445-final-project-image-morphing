@@ -125,7 +125,13 @@ def _generate_frames(no_of_frames, img1, img2, tri1, tri2, output_dir, blend, in
             k = frame_index
             alpha = k / n
 
-        print(f"{frame_index} frame is generating...")
+        blending_name = ""
+        if blend == "linear":
+            blending_name = "linear blending"
+        else:
+            blending_name = "laplacian blending"
+        print(f"{frame_index} frame is generating with {blending_name}...")
+        
         if include_endpoints and frame_index == 1:
             inter = img1.copy()
         elif include_endpoints and frame_index == no_of_frames:
