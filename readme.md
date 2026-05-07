@@ -70,23 +70,33 @@ This file contains the steps on how to execute the file.
 
 Note: TPS mode uses `--frames`. Do not use `--total-frames` with `--transform tps`.
 
+### Manual Correspondence Examples
+
 <strong>Step-1</strong> Open the command line or terminal and enter the following -
 ```text
-$ python3 main.py img1.png img2.png
+$ python3 main.py img1.png img2.png --correspondence manual --transform affine --blend linear --frames 100
+$ python3 main.py img1.png img2.png --correspondence manual --transform affine --blend laplacian --frames 100
 ```
-here img1 refers to the source image and img2 refers to the destination image.
+Here, img1 refers to the source image and img2 refers to the destination image.
 
-<strong>Step-2</strong> Enter the control points on img1 using mouse click and press escape after entering all points. Do the same for img2 but the order of points should remain same.
+<strong>Step-2</strong> Enter the control points on img1 using mouse click and press escape after entering all points. Do the same for img2, but the order of points should remain the same.
 
 The program now automatically adds boundary anchor points around the image border (corners plus quarter-edge anchors), so you only need to click the meaningful feature points manually.
 
-After doing so the system will display as well as save the triangulated images.
+After doing so, the system will display and save the triangulated images.
 
 <strong>Step-3</strong> Enter the number of intermediate images you want to see, or pass it directly with `--frames`.
 
 The morphing method is selected from the command line. Use `--transform affine` or `--transform tps`, and use `--blend linear` or `--blend laplacian`.
 
-The code will take some time to create and save the desired number of intermediates. We have directly saved the images to save the time.
+The code will take some time to create and save the desired number of intermediates. We have directly saved the images to save time.
+
+Output folders:
+
+```text
+generated-images/manual-linear-dissolve/
+generated-images/manual-laplacian-pyramid-blending/
+```
 
 ### Automatic Correspondence Examples
 
