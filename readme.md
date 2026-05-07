@@ -70,6 +70,8 @@ This file contains the steps on how to execute the file.
 
 Note: TPS mode uses `--frames`. Do not use `--total-frames` with `--transform tps`.
 
+
+---
 ### Manual Correspondence Examples
 
 <strong>Step-1</strong> Open the command line or terminal and enter the following -
@@ -98,6 +100,7 @@ generated-images/manual-linear-dissolve/
 generated-images/manual-laplacian-pyramid-blending/
 ```
 
+---
 ### Automatic Correspondence Examples
 
 Automatic correspondence uses face landmarks, so it works best when each input image contains a clear face.
@@ -149,6 +152,8 @@ evaluation-results/manual-vs-auto/laplacian_side_by_side_frame_51.png
 evaluation-results/manual-vs-auto/laplacian_side_by_side_frame_99.png
 ```
 
+
+---
 ### TPS Transformation Examples
 
 Thin Plate Spline transformation is selected with `--transform tps`. It can be combined with manual or automatic correspondences and either blending method.
@@ -179,6 +184,7 @@ $ python3 main.py img1.png img2.png --blend laplacian --correspondence auto --fr
 ```
 
 
+---
 ## Multi Image Morphing
 
 this capability allows morphing multiple images when the initial code only allowed 2.
