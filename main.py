@@ -82,7 +82,7 @@ def parse_args():
         help="Output directory for compare-mode metrics and figures.",
     )
     parser.add_argument("--multi-image", default="", help="directory where multiple imges are kept")
-    parser.add_argument("--multi-image-proccess", default="seq", help = "'seq' means you want to merge the images into a sequence of morphes, while 'avg' means you want to average the photos")
+    parser.add_argument("--multi-image-process", default="seq", help = "'seq' means you want to merge the images into a sequence of morphes, while 'avg' means you want to average the photos")
     parser.add_argument("--multi-image-trigs", help="enter saved if you want to used saved coordinate from last manual point selection")
     return parser.parse_args()
 
@@ -511,7 +511,7 @@ def run_multi_image_mode(args):
     trigs = read_trig_files()
     tris = show_triangulated_for_muliple_imgs(imgs, trigs)
 
-    if args.multi_image_proccess == "avg":
+    if args.multi_image_process == "avg":
         create_avg_img(imgs, tris)
     elif args.blend == "linear":
         warp_image_affine_transform_multiple_imgs(frames, imgs_original, tris)
