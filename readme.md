@@ -171,19 +171,37 @@ $ python3 main.py img1.png img2.png --blend laplacian --correspondence auto --fr
 
 ## Multi Image Morphing
 
-<Strong> sequential image morphing<Strong>  
-this involves morphing the first image to the second, the second to the third and so on.  
+this capability allows morphing multiple images when the initial code only allowed 2.
+the functionality can be split into two parts
 
-<Strong> image averaging <Strong>
-this involves finding the average morph posistion between all of the images, and averaging the images together.
+<Strong> Sequential image morphing</Strong>    
 
+this involves morphing the first image to the second, the second to the third and so on, making a sequential number of morphs  
+
+<Strong> Image averaging </Strong>
+
+this functionaliy finds the average morph posistion between all of the images, and averages the images together to create an average image.
+
+<Strong> Use case </Strong>
+
+
+this capability adds three new flags to the cli
+```text
+--multi-image {location of the directory of images}'
+```
+will automaticaly add all the images in said directory to the process
 
 ```text
-to use this capability add '--multi-image {directory of images}' to the command line. the program will ask you to manually pick your triangulation points, unless you have picked them in a previous iteration, in that case you can add the flag '--multi-image-trigs saved'.
-  
-the program defaults to the sequential image morphing and will ask you how many frames you would like to generate between images, but you can add the flag '--multi-image-proccess avg' to apply image average morphing.
-
+--multi-image-trigs saved
 ```
+will use any previously manually entered points to mark the morphing triangles
+
+the program defaults to sequential image morphing and will ask you how many frames you would like to generate between images, but you can add the flag 
+```text
+'--multi-image-proccess avg' 
+```
+to run the average image morphing instead
+
 ```text
 $ python3 main.py img1.png img8.png --multi-image ./multi-input-images/ --blend linear --correspondence manual --frames 10
 $ python3 main.py img1.png img8.png --multi-image ./multi-input-images/ --blend laplacian --correspondence manual --frames 10
