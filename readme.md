@@ -68,7 +68,7 @@ This file contains the steps on how to execute the file.
 | `--no-display` | flag | Save outputs without opening OpenCV display windows. Useful for automatic runs. |
 | `--save-correspondences` | optional path | Save the selected correspondence points to JSON. |
 
-Note: TPS mode uses `--frames`. Do not use `--total-frames` with `--transform tps`.
+Note: TPS mode uses `--frames`. Do not use `--total-frames` with `--transform tps`. TPS also opens a small face-border selection step even when automatic correspondences are used, so do not pass `--no-display` for TPS runs.
 
 
 ---
@@ -156,12 +156,12 @@ evaluation-results/manual-vs-auto/laplacian_side_by_side_frame_99.png
 ---
 ### TPS Transformation Examples
 
-Thin Plate Spline transformation is selected with `--transform tps`. It can be combined with manual or automatic correspondences and either blending method.
+Thin Plate Spline transformation is selected with `--transform tps`. It can be combined with manual or automatic correspondences and either blending method. After the key correspondences are chosen, TPS asks for a rectangular face border on each image: click two opposite corners around the face/head boundary, then press Enter. Press `R` to reset the rectangle if needed. The code generates several border rings from that rectangle to reduce edge distortion.
 
 ```text
 $ python3 main.py img1.png img2.png --correspondence manual --transform tps --blend linear --frames 30
 $ python3 main.py img1.png img2.png --correspondence manual --transform tps --blend laplacian --frames 30
-$ python3 main.py img1.png img2.png --correspondence auto --transform tps --blend laplacian --frames 30 --no-display
+$ python3 main.py img1.png img2.png --correspondence auto --transform tps --blend laplacian --frames 30
 ```
 
 Output folders:
@@ -225,7 +225,7 @@ $ python3 main.py img1.png img8.png --multi-image ./multi-input-images/ --blend 
 
 ### Multi-Image TPS Demo
 
-Use `--transform tps` to run Thin Plate Spline warping through the whole multi-image sequence. It can be combined with `--blend linear` or `--blend laplacian`. Manual mode uses the saved or newly clicked control points for each image.
+Use `--transform tps` to run Thin Plate Spline warping through the whole multi-image sequence. It can be combined with `--blend linear` or `--blend laplacian`. Manual mode uses the saved or newly clicked control points for each image. TPS also asks for a two-click rectangular face border for each image, even in automatic correspondence mode.
 
 ```text
 $ python3 main.py img1.png img8.png --multi-image ./multi-input-images/ --correspondence manual --transform tps --blend linear --frames 10
@@ -235,7 +235,7 @@ $ python3 main.py img1.png img8.png --multi-image ./multi-input-images/ --corres
 For an overall demo that combines multi-image morphing, automatic correspondence, TPS transformation, and Laplacian pyramid blending:
 
 ```text
-$ python3 main.py img1.png img8.png --multi-image ./multi-input-images/ --correspondence auto --transform tps --blend laplacian --frames 10 --no-display
+$ python3 main.py img1.png img8.png --multi-image ./multi-input-images/ --correspondence auto --transform tps --blend laplacian --frames 10
 ```
 
 Output folders:
