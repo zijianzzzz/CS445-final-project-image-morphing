@@ -6,7 +6,7 @@
 
 ---
 
-# Project effect: 
+### Project effect: 
 Affine transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing:
 <!-- <strong>Sample ouput:</strong> -->
 
@@ -20,10 +20,9 @@ Affine transformation + Laplacian pyramid blending + Auto landmark and triangula
 <!-- <img width="300" height="300" alt="output-5M" src="https://github.com/user-attachments/assets/487bf053-9f43-4db9-a5da-ebc20de29554" /> -->
 <img width="300" height="300" alt="output-5m" src="https://github.com/user-attachments/assets/842790cf-af68-4106-8f48-eee77d2ee2d7" />
 
-
 TPS transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing:
-<img width="300" height="300" alt="output-4 5M" src="https://github.com/user-attachments/assets/a80187b3-396c-47e8-be5a-5c4a60bac24f" />
 
+<img width="300" height="300" alt="output-4 5M" src="https://github.com/user-attachments/assets/a80187b3-396c-47e8-be5a-5c4a60bac24f" />
 ---
 
 
