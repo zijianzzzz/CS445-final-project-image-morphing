@@ -11,7 +11,7 @@ Image 1: Two-image Affine + Laplacian
 
 Image 2: Affine transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing
 
-Image 3: TPS transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing:
+Image 3: TPS transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing
 <!-- <strong>Sample ouput:</strong> -->
 
 <!-- <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/3207051d-6e26-4a34-b652-da9665d8486f" /> -->
