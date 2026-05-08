@@ -23,6 +23,7 @@ Affine transformation + Laplacian pyramid blending + Auto landmark and triangula
 <p> TPS transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing: </p>
 
 <img width="300" height="300" alt="output-4 5M" src="https://github.com/user-attachments/assets/a80187b3-396c-47e8-be5a-5c4a60bac24f" />
+
 ---
 
 
