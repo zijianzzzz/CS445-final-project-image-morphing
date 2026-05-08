@@ -6,7 +6,8 @@
 
 ---
 
-## Project effect: Affine transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing:
+# Project effect: 
+Affine transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing:
 <!-- <strong>Sample ouput:</strong> -->
 
 <!-- <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/3207051d-6e26-4a34-b652-da9665d8486f" /> -->
@@ -19,7 +20,8 @@
 <!-- <img width="300" height="300" alt="output-5M" src="https://github.com/user-attachments/assets/487bf053-9f43-4db9-a5da-ebc20de29554" /> -->
 <img width="300" height="300" alt="output-5m" src="https://github.com/user-attachments/assets/842790cf-af68-4106-8f48-eee77d2ee2d7" />
 
-## Project effect: TPS transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing:
+#Project effect: 
+TPS transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing:
 
 <img width="300" height="300" alt="output-5m" src="https://github.com/user-attachments/assets/096e73ac-9cb8-4040-987e-203594596ed0" />
 
