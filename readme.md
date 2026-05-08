@@ -6,7 +6,7 @@
 
 ---
 
-## Project effect samples:
+## Project effect: Affine transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing:
 <!-- <strong>Sample ouput:</strong> -->
 
 <!-- <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/3207051d-6e26-4a34-b652-da9665d8486f" /> -->
@@ -19,7 +19,13 @@
 <!-- <img width="300" height="300" alt="output-5M" src="https://github.com/user-attachments/assets/487bf053-9f43-4db9-a5da-ebc20de29554" /> -->
 <img width="300" height="300" alt="output-5m" src="https://github.com/user-attachments/assets/842790cf-af68-4106-8f48-eee77d2ee2d7" />
 
+## Project effect: TPS transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing:
+
+<img width="300" height="300" alt="output-5m" src="https://github.com/user-attachments/assets/096e73ac-9cb8-4040-987e-203594596ed0" />
+
 ---
+
+
 ## Project overview:
 <p>Image morphing is a digital image processing technique that creates a smooth and continuous transformation from one image to another. Unlike simple crossfading (which only blends pixel intensities), morphing combines geometric warping and color interpolation to produce a visually coherent transition where shapes, structures, and textures appear to evolve naturally over time. The basic techniques used in image morphing are: Linear cross-dissolve blending, Delaunay Triangulation, and Affine transformation. In this project, we will explore the advanced techniques which can enrich and enhance image morphing functionalities.</p>
 <p>Firstly, the images are divided into several parts by selecting different points on them. These points
