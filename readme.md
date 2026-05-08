@@ -89,9 +89,7 @@ $ python3 main.py img1.png img2.png --correspondence manual --transform affine -
 ```
 Here, img1 refers to the source image and img2 refers to the destination image.
 
-<strong>Step-2</strong> Enter the control points on img1 using mouse click and press escape after entering all points. Do the same for img2, but the order of points should remain the same.
-
-The program now automatically adds boundary anchor points around the image border (corners plus quarter-edge anchors), so you only need to click the meaningful feature points manually.
+<strong>Step-2</strong> Enter the control points on img1 using mouse click (Total 7 points: Left eye, right eye, lip, and four corners) and press escape after entering all points. Do the same for img2, but the order of points should remain the same. The program now automatically adds boundary anchor points around the image border (corners plus quarter-edge anchors), so you only need to click the meaningful feature points manually.
 
 After doing so, the system will display and save the triangulated images.
 
