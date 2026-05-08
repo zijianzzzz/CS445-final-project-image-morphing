@@ -11,18 +11,18 @@ Affine transformation + Laplacian pyramid blending + Auto landmark and triangula
 <!-- <strong>Sample ouput:</strong> -->
 
 <!-- <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/3207051d-6e26-4a34-b652-da9665d8486f" /> -->
-<img width="300" height="300" alt="output" src="https://github.com/user-attachments/assets/ffa70be3-dd75-46e5-9d0f-87322feb007c" />
+<img width="400" height="400" alt="output" src="https://github.com/user-attachments/assets/ffa70be3-dd75-46e5-9d0f-87322feb007c" />
 <!-- <img width="610" height="612" alt="image" src="https://github.com/user-attachments/assets/3207051d-6e26-4a34-b652-da9665d8486f" />
 <img width="610" height="612" alt="output" src="https://github.com/user-attachments/assets/ffa70be3-dd75-46e5-9d0f-87322feb007c" /> -->
 <!-- <img width="410" height="412" alt="image" src="https://github.com/user-attachments/assets/3207051d-6e26-4a34-b652-da9665d8486f" />
 <img width="410" height="412" alt="output" src="https://github.com/user-attachments/assets/ffa70be3-dd75-46e5-9d0f-87322feb007c" /> -->
 <!-- <img width="300" height="300" alt="output" src="https://github.com/user-attachments/assets/e0c62f97-3173-4ed5-88bd-2731ee747aeb" /> -->
 <!-- <img width="300" height="300" alt="output-5M" src="https://github.com/user-attachments/assets/487bf053-9f43-4db9-a5da-ebc20de29554" /> -->
-<img width="300" height="300" alt="output-5m" src="https://github.com/user-attachments/assets/842790cf-af68-4106-8f48-eee77d2ee2d7" />
+<img width="400" height="400" alt="output-5m" src="https://github.com/user-attachments/assets/842790cf-af68-4106-8f48-eee77d2ee2d7" />
 
 TPS transformation + Laplacian pyramid blending + Auto landmark and triangulation + Multi-image bulk morphing:
 
-<img width="300" height="300" alt="output-4 5M" src="https://github.com/user-attachments/assets/a80187b3-396c-47e8-be5a-5c4a60bac24f" />
+<img width="400" height="400" alt="output-4 5M" src="https://github.com/user-attachments/assets/a80187b3-396c-47e8-be5a-5c4a60bac24f" />
 ---
 
 
